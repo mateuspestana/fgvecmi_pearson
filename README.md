@@ -1,0 +1,2 @@
+# Índice de Correlação de Pearson
+Feito pelo Prof. Matheus C. Pestana (FGV/ECMI) para os alunos do curso de Introdução à Ciência de Dados da graduação em Comunicação Digital da FGV/ECMI (Escola de Comunicação, Mídia e Informação, da Fundação Getúlio Vargas).
