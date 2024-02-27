@@ -11,14 +11,15 @@ col1.header('Medidas')
 gera_med = col1.button('Gerar Medidas aleatórias')
 tipo = col1.radio('Escolha o tipo de medida', ['Altura', 'Idade'])
 alturas = []
+n_ids = col1.slider('Número de indivíduos', 1, 100, 15)
 if gera_med:
     if tipo == 'Altura':
-        alturas = np.random.normal(1.70, 0.1, 15)
+        alturas = np.random.normal(1.70, 0.1, n_ids)
         alturas = np.round(alturas, 2)
     else:
-        alturas = np.random.normal(20, 3, 15)
+        alturas = np.random.normal(20, 3, n_ids)
         alturas = np.round(alturas, 0)
-ids = range(1, 16, 1)
+ids = range(1, n_ids + 1, 1)
 df_alturas = pd.DataFrame(ids, columns=['Aluno'])
 if len(alturas) > 1:
     df_alturas['Medida'] = alturas
