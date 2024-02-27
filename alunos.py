@@ -28,4 +28,6 @@ alturas = col1.data_editor(df_alturas)
 
 col2.header('Distribuição de Medidas')
 df = pd.DataFrame({'Medida': alturas['Medida']})
-col2.write(alt.Chart(df).mark_bar().encode(x=alt.X('Medida', bin=True), y='count()').properties(width=600, height=600))
+col2.write(alt.Chart(df).mark_bar().encode(x=alt.X('Medida', bin=True), y='count()').properties(width=600, height=500))
+col2.write(f"Média: {np.round(np.mean(alturas['Medida']), 3)} // Desvio Padrão: {np.round(np.std(alturas['Medida']), 3)} // Variância: {np.round(np.var(alturas['Medida']), 3)} // Mediana: {np.round(np.median(alturas['Medida']), 3)} // Moda: {alturas['Medida'].mode()[0]}")
+
