@@ -3,7 +3,7 @@ import altair as alt
 import pandas as pd
 import numpy as np
 
-st.title('Distribuição Normal')
+st.title('Distribuição Normal - Ciência de Dados')
 st.write('A distribuição normal é uma das mais importantes distribuições de probabilidade. Ela é uma distribuição contínua, simétrica em relação à média, em forma de sino, e é caracterizada pelos seus dois parâmetros: a média (μ) e o desvio padrão (σ).')
 st.caption('Desenvolvido pelo Prof. Matheus C. Pestana (FGV ECMI)')
 col1, col2 = st.columns([1, 2])
