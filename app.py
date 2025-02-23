@@ -27,7 +27,7 @@ def main():
     data_col1, data_col2 = st.columns(2)
     data_col1.header('Dados')
     data_col1.write('Altere abaixo os dados para observar mudanças na correlação.')
-    dados = st.experimental_data_editor(dados.rename(columns={'x': 'Variável independente (x)', 'y': 'Variável dependente (y)'}), use_container_width=False)
+    dados = st.data_editor(dados.rename(columns={'x': 'Variável independente (x)', 'y': 'Variável dependente (y)'}), use_container_width=False)
     dados.rename(columns={'Variável independente (x)': 'x', 'Variável dependente (y)': 'y'}, inplace=True)
 
     data_col2.metric(label='r de Pearson', value=dados.corr().iloc[1, 0].round(2))
